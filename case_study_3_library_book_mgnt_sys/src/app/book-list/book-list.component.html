@@ -1,0 +1,27 @@
+<div class="book-list">
+  <h2>Library Catalog</h2>
+
+  <input type="text" placeholder="Search by title..." [(ngModel)]="filterTerm" class="search" />
+
+  <div class="book-card"
+       *ngFor="let book of filteredBooks; let i = index"
+       [ngClass]="{ 'checked-out': !book.inStock, 'new-arrival': book.newArrival }"
+       [appHoverHighlight]="book.inStock ? '#f0FFF0' : '#fff8e1'"
+       [hoverScale]="1.02">
+       
+    <div class="book-header">
+      <h4>{{ book.title }}</h4>
+      <div class="badges">
+        <span class="badge new" *ngIf="book.newArrival">New Arrival</span>
+        <span class="badge out" *ngIf="!book.inStock">Checked Out</span>
+      </div>
+    </div>
+
+    <p class="desc">{{ book.description }}</p>
+
+    <div class="meta">
+      <span class="price">{{ book.price | priceInr }}</span>
+      <button class="btn" [disabled]="!book.inStock">Borrow</button>
+    </div>
+  </div>
+</div>
