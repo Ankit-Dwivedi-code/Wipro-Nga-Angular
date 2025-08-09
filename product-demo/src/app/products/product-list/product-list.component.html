@@ -1,0 +1,24 @@
+<div class="product-list">
+    <h2> Product Catalog</h2>
+    <!-- a div for product card -->
+     <div class="product-card" *ngFor="let p of products; let i = index"
+     [ngClass]="{ 'out-of-stock': !p.inStock }"
+     [appHighlight] = "p.inStock ? '#f0FFF0' : '#fff8e1'"
+     >
+     <!-- a div for product header showing names and stock -->
+
+     <div class="product-header">
+        <h4>{{ p.name }}</h4>
+        <span class="badge" *ngIf="!p.inStock">Out of Stock</span>
+     </div>
+
+     <p class="desc">{{ p.description }}</p>
+     <!-- a div for prices in price format -->
+
+
+         <div class="meta">
+            <span class="price">{{ p.price | priceFormat : 'INR' : 'en-IN' }}</span>
+            <button [disabled]="!p.inStock">Buy</button>
+         </div>
+     </div>
+</div>
