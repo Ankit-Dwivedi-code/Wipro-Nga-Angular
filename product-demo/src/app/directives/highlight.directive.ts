@@ -11,7 +11,7 @@ export class HighlightDirective {
   private originalBackground: string | null = null;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {
-    this.originalBackground = this.el.nativeElement.style.backgroundColor || ' ';
+    this.originalBackground = this.el.nativeElement.style.backgroundColor || 'white';
   }
 
   // mouse enter hover effect
@@ -22,6 +22,8 @@ export class HighlightDirective {
     this.renderer.setStyle(this.el.nativeElement, 'boxShadow', `0 2px 10px rgba(0, 0, 0, 0.08)`);
     //transform
     this.renderer.setStyle(this.el.nativeElement, 'transform', 'translate(-3px');
+    //curser pointer
+    this.renderer.setStyle(this.el.nativeElement, 'cursor', 'pointer');
   }
 
   @HostListener('mouseleave') onLeave() {
