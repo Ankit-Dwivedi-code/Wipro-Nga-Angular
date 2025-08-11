@@ -1,0 +1,10 @@
+/* Here we will implement scope styling */
+
+p{
+    font-weight: bold;
+    color: purple;
+}
+
+
+/* This styling is no shared and don't leak to the other components */
+
