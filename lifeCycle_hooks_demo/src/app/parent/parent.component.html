@@ -1,0 +1,8 @@
+
+<p>{{parentTitle}}</p>
+<button (click)="changeTitle()">Change Title</button>
+
+<button (click)="removeChild = !removeChild">{{removeChild ? 'Add Child' : 'Remove Child'}} </button>
+
+<app-lifecycle-demo *ngIf="!removeChild" [title]="parentTitle"></app-lifecycle-demo>
+
