@@ -1,0 +1,21 @@
+
+<!-- Displaying the list of events into tabular format -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Event Name</th>
+      <th>Date</th>
+      <th>Ticket Price</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let event of events" [appHighlightDirective]="event.price">
+      <td>{{ event.name }}</td>
+      <td>{{ event.date }}</td>
+      <td>{{ event.price | priceFormatPipe }}</td>
+      <td>{{ event.category }}</td>
+    </tr>
+  </tbody>
+</table>
