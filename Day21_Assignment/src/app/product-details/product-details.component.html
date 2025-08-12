@@ -1,0 +1,14 @@
+<div *ngIf="product; else noProduct">
+  <h2>{{ product.name }}</h2>
+  <p>Price: {{ product.price | currency }}</p>
+
+  <label>
+    Feedback:
+    <input [(ngModel)]="userFeedback" placeholder="Enter feedback">
+  </label>
+  <button (click)="submitFeedback()">Submit</button>
+</div>
+
+<ng-template #noProduct>
+  <p>Please select a product to see details.</p>
+</ng-template>

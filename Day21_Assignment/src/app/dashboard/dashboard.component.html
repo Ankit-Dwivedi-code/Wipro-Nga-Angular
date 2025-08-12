@@ -1,0 +1,23 @@
+<h1>ShopEase Dashboard</h1>
+
+<ul>
+  <li *ngFor="let product of products">
+    {{ product.name }} - {{ product.price | currency }}
+    <button (click)="selectProduct(product)">View Details</button>
+  </li>
+</ul>
+
+<hr>
+
+<app-product-details
+  [product]="selectedProduct"
+  (feedback)="onFeedbackReceived($event)">
+</app-product-details>
+
+<hr>
+<h3>Feedback Received:</h3>
+<ul>
+  <li *ngFor="let fb of feedbackList">
+    Product ID {{ fb.productId }}: {{ fb.feedback }}
+  </li>
+</ul>
