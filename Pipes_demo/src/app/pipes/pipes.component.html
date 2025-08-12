@@ -1,0 +1,29 @@
+<p>Angular pipes - Playground in action!</p>
+
+<!-- Date pipes -->
+<p>Today's Date: {{ todaysDate | date : 'fullDate' }}</p>
+
+<!-- Currency pipes -->
+<p>Product Price: {{ productPrice | currency : 'USD' : 'symbol' : '1.2-2' }}</p>
+
+<!-- Uppercase and lowercase pipes -->
+<p>Welcome Message: {{ welcomeMessage | uppercase }}</p>
+<p>Welcome Message: {{ welcomeMessage | lowercase }}</p>
+
+<!-- Slice pipes first four letter of product name -->
+<p>Product Name (first 4 letters): {{ productName | slice:0:4 }}</p>
+
+<!-- Percent pipes -->
+<p>Discount: {{ discount | percent }}</p>
+
+<!-- Titlecase pipes -->
+<p>Product Name Title Case: {{ productName | titlecase }}</p>
+
+<!-- Decimal pipes -->
+<p>Ratings: {{ productRatings | number : '1.2-2' }}</p>
+
+
+<hr>
+<!-- Notes for pure pipes and impure pipes -->
+<p>Pure pipes: These pipes only depend on the input values and do not change their output unless the input values change. They are more efficient as Angular can cache their output.</p>
+<p>Impure pipes: These pipes can change their output even if the input values are the same. They are less efficient as Angular cannot cache their output and will re-evaluate them on every change detection cycle.</p>
