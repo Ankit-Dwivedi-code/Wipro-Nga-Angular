@@ -1,0 +1,100 @@
+/* ==== General Form Styling ==== */
+form {
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Headings */
+form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #4a4a4a;
+  font-weight: 600;
+}
+
+/* ==== Labels & Inputs ==== */
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* ==== Buttons ==== */
+button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #4f46e5, #6d28d9);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #4338ca, #5b21b6);
+  transform: translateY(-1px);
+}
+
+/* ==== Error Messages ==== */
+.error-message {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+/* Valid Input */
+input.ng-valid.ng-touched {
+  border-color: #16a34a;
+}
+
+/* Invalid Input */
+input.ng-invalid.ng-touched {
+  border-color: #dc2626;
+}
+
+/* ==== Extra UI Niceties ==== */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: #16a34a;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+form small {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
