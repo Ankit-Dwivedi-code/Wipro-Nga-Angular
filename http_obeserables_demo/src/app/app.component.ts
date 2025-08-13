@@ -10,6 +10,7 @@ import { UserService } from './Services/user.service';
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+  
 })
 
 
