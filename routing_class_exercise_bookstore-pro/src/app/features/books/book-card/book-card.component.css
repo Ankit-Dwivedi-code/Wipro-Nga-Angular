@@ -1,0 +1,10 @@
+.card{display:grid;grid-template-columns:96px 1fr;gap:1rem;padding:1rem;border:1px solid #e5e7eb;border-radius:16px;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.04)}
+.cover{width:96px;height:128px;object-fit:cover;border-radius:10px;border:1px solid #eee}
+.body{display:flex;flex-direction:column;gap:.5rem}
+h3{margin:0;font-size:1.05rem}
+.meta{font-size:.85rem;color:#666}
+.desc{color:#444;margin:.25rem 0 .5rem}
+.price-row{display:flex;align-items:center;gap:.5rem}
+.price{font-weight:700}
+.price--deal{color:#0a7; }
+.badge{font-size:.75rem;background:#fee2e2;color:#b91c1c;border-radius:999px;padding:.15rem .5rem}

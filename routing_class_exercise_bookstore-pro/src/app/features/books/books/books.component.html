@@ -1,0 +1,23 @@
+<section class="panel">
+  <h2>Async Pipe List</h2>
+  <ng-container *ngIf="books$ | async as books; else loading">
+    <p class="hint">Loaded via <code>books$ | async</code>.</p>
+    <ul class="grid">
+      <li *ngFor="let b of books; trackBy: trackById">
+        <app-book-card [book]="b"></app-book-card>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #loading><p class="hint">Loading…</p></ng-template>
+</section>
+
+<section class="panel">
+  <h2>Manual Subscribe List</h2>
+  <p class="hint">Loaded via manual <code>subscribe</code> with <code>ngOnDestroy</code> cleanup.</p>
+  <ul class="grid" *ngIf="manualBooks.length; else empty">
+    <li *ngFor="let b of manualBooks; trackBy: trackById">
+      <app-book-card [book]="b"></app-book-card>
+    </li>
+  </ul>
+  <ng-template #empty><p class="hint">No books yet.</p></ng-template>
+</section>
