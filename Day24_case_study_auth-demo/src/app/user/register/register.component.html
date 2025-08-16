@@ -1,0 +1,35 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label style="font-weight: bold;">Name:</label>
+  <input formControlName="name" placeholder="Enter your name" />
+  <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid" style="color: crimson;">
+    Name is required (min 3 chars)
+  </div>
+
+  <label style="font-weight: bold;">Email:</label>
+  <input formControlName="email" placeholder="Enter your email" />
+  <div *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid" style="color: crimson;">
+    Valid email required
+  </div>
+
+  <label style="font-weight: bold;">Password:</label>
+  <input type="password" formControlName="password" placeholder="Enter your password" />
+  <div *ngIf="userForm.get('password')?.touched && userForm.get('password')?.invalid" style="color: crimson;">
+    Min length 6 required
+  </div>
+
+  <button type="submit">Register</button>
+</form>
+
+<hr />
+
+<button (click)="fetchUsers()">Fetch Users</button>
+
+<table *ngIf="users.length">
+  <tr><th>Name</th><th>Email</th></tr>
+  <tr *ngFor="let u of users">
+    <td>{{ u.name }}</td>
+    <td>{{ u.email }}</td>
+  </tr>
+</table>
+
+<p *ngIf="errorMessage" style="color:crimson">{{ errorMessage }}</p>
