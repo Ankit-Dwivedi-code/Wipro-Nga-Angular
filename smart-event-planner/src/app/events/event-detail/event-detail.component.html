@@ -1,0 +1,10 @@
+<h2>{{ event?.title }}</h2>
+<p>Date: {{ event?.date | date }}</p>
+<p>Max Attendees: {{ event?.maxAttendees }}</p>
+
+<!-- Register Form -->
+<form #regForm="ngForm" (ngSubmit)="register(regForm.value)">
+  <input type="text" name="name" ngModel required placeholder="Enter your name" />
+  <input type="email" name="email" ngModel required placeholder="Enter your email" />
+  <button type="submit">Register</button>
+</form>

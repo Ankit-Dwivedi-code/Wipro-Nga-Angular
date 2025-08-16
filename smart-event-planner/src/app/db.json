@@ -1,0 +1,47 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Angular Workshop",
+      "date": "2025-08-20",
+      "maxAttendees": 100
+    },
+    {
+      "id": "2",
+      "title": "Cloud Summit",
+      "date": "2025-09-01",
+      "maxAttendees": 200
+    },
+    {
+      "id": "137e",
+      "title": "New event",
+      "date": "2025-09-01",
+      "maxAttendees": 50
+    },
+    {
+      "id": "9b20",
+      "title": "New event 2",
+      "date": "2025-10-10",
+      "maxAttendees": 100
+    }
+  ],
+  "attendees": [
+    {
+      "id": "1",
+      "name": "Ankit",
+      "email": "ankit@example.com"
+    },
+    {
+      "id": "3e36",
+      "name": "Demo",
+      "email": "demo@gmail.com",
+      "eventId": "1"
+    },
+    {
+      "id": "b91a",
+      "name": "Ankit",
+      "email": "ankit12345@gmail.com",
+      "eventId": "1"
+    }
+  ]
+}
